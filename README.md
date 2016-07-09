@@ -21,3 +21,8 @@ Bots share knowledge to create "contexts" that can be used across the bot networ
 ## Technology
 
 TBD but looking into microservices architecture like Lambda from Amazon. The key is that the bot network above should be easy to setup (super minimal configuration), and scale to infinity if necessary. Focusing less on specific hosts.
+
+Some references to look into:
+  https://aws.amazon.com/lambda/
+  https://aws.amazon.com/kinesis/
+  https://aws.amazon.com/dynamodb/
