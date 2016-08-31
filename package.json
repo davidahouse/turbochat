@@ -1,0 +1,30 @@
+{
+  "name": "turbochat",
+  "version": "0.0.1",
+  "description": "Autonomously Collaborative bot library",
+  "main": "./lib/TurboChat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidahouse/turbochat.git"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "botkit",
+    "nlp",
+    "ai"
+  ],
+  "author": "Kelly Senna & David House",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidahouse/turbochat/issues"
+  },
+  "homepage": "https://github.com/davidahouse/turbochat#readme",
+  "dependencies": {
+    "botkit": "0.0.5",
+    "natural": "^0.2.1"
+  }
+}
