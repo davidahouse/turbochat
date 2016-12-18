@@ -1,0 +1,12 @@
+- name: name
+  listen:
+    - what is your name?
+    - tell me your name
+    - do you have a name?
+  response: My name is $name
+
+- name: open
+  listen:
+    - open the door
+  response: Opening the door
+  callback: openDoor
