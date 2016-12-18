@@ -1,12 +1,9 @@
-var TurboChatColloquy = require('../lib/TurboChatColloquy.js');
-
 module.exports = DefaultColloquy;
 
 function DefaultColloquy(name) {
 
   this.name = name;
-  var colloquy = new TurboChatColloquy("./examples/default.colloquy");
-  this.dialogues = colloquy.dialogues;
+  this.colloquyFile = "./examples/defailt.colloquy";
   this.classifierData = {"name": name};
 }
 

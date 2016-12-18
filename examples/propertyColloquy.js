@@ -1,14 +1,10 @@
-var TurboChatColloquy = require('../lib/TurboChatColloquy.js');
-
 module.exports = PropertyColloquy;
 
 function PropertyColloquy(property) {
 
   this.property = property;
   this.value = "";
-
-  var colloquy = new TurboChatColloquy("./examples/property.colloquy");
-  this.dialogues = colloquy.dialogues;
+  this.colloquyFile = "./examples/property.colloquy";
   this.classifierData = {"property": property};
 }
 
