@@ -1,7 +1,13 @@
 var TurboChat = require('../lib/TurboChat.js');
+var DefaultColloquy = require('./defaultColloquy.js');
+var PropertyColloquy = require('./propertyColloquy.js');
 
 console.log('--- setting configuration');
-var colloquies = {"thing1": "./examples/thing1.colloquy"};
+var statusColloquy = new PropertyColloquy("status");
+
+var colloquies = {"default": new DefaultColloquy("secondary-hyperdrive"),
+                  "status": statusColloquy
+};
 var thing1cfg = {"slack": {"token": process.env.THING1_SLACK_TOKEN},
                  "slack-name": "secondary-hyperdrive",
                  "colloquies": colloquies};
@@ -9,25 +15,7 @@ var thing1cfg = {"slack": {"token": process.env.THING1_SLACK_TOKEN},
 console.log('--- creating turbochat object');
 var thing1 = new TurboChat(thing1cfg);
 
-thing1.prototype = {
-  openDoor: function() {
-    return "got the callback to open the door";
-  }
-}
+statusColloquy.value = "Online!";
 
 console.log('--- starting');
 thing1.start();
-
-// console.log('thing1 starting');
-// var thing1 = new TurboChat(thing1cfg);
-// thing1.start();
-
-// yaml = require('js-yaml');
-// fs = require('fs');
-//
-// try {
-//   var doc = yaml.safeLoad(fs.readFileSync('./examples/thing1.interface', 'utf8'));
-//   console.log(doc);
-// } catch (e) {
-//   console.log(e);
-// }

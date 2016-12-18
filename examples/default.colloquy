@@ -1,0 +1,12 @@
+- name: onName
+  listen:
+    - what is your name?
+    - tell me your name
+    - do you have a name?
+
+- name: onHelp
+  listen:
+    - help
+    - can you help me?
+    - what can you do?
+    - how do you work?

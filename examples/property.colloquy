@@ -1,0 +1,5 @@
+- name: onValue
+  listen:
+    - what is the {{property}}?
+    - what is your {{property}}?
+    - can you tell me the {{property}}?
