@@ -15,7 +15,11 @@ var thing1cfg = {"slack": {"token": process.env.THING1_SLACK_TOKEN},
 console.log('--- creating turbochat object');
 var thing1 = new TurboChat(thing1cfg);
 
-statusColloquy.value = "Online!";
+statusColloquy.setValue("Online!");
+
+function onReply() {
+    console.log('--- we did a reply');
+}
 
 console.log('--- starting');
-thing1.start();
+thing1.start(onReply);

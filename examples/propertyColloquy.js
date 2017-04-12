@@ -6,8 +6,10 @@ function PropertyColloquy(property) {
   this.value = "";
   this.colloquyFile = "./examples/property.colloquy";
   this.classifierData = {"property": property};
+  this.responseData = {"property": property, "value": ""};
 }
 
-PropertyColloquy.prototype.onValue = function() {
-  return 'The ' + this.property + ' is ' + this.value;
+PropertyColloquy.prototype.setValue = function(value) {
+  this.value = value;
+  this.responseData["value"] = this.value;
 }

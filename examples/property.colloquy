@@ -3,3 +3,4 @@
     - what is the {{property}}?
     - what is your {{property}}?
     - can you tell me the {{property}}?
+  response: The {{property}} is {{value}}
